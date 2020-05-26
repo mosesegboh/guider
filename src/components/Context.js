@@ -14,10 +14,21 @@ class InfoProvider extends Component {
         info: placeInfo,
         reviews: reviews,
         detailInfo: detailInfo,
-        new:news
-
-
+        news:news
+    };
+    getItem=id=>{
+        //the below is basically looping through the item object and returning each
+        const item = this.state.info.find(item=>item.id===id);
+        return item;
     }
+
+    handleDetail = id =>  {
+        const item = this.getItem(id);
+        this.setState(()=>{
+           return  {detailInfo: item}
+        });
+    };
+
     render() {
         return (
            <InfoContext.Provider value={{
@@ -31,7 +42,8 @@ class InfoProvider extends Component {
                headerText: this.state.headerText,
                name: this.state.name,
                avatar: this.state.avatar,
-               comment: this.state.comment
+               comment: this.state.comment,
+               handleDetail:this.handleDetail
            }}>
                {this.props.children}
            </InfoContext.Provider>

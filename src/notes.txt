@@ -1,6 +1,8 @@
 - if you get the components not loading, try using functions saved as constant variables and export instead of the normal functional components
 - Error invariant failed: You should not use <Switch> outside a <Route>....solve by importing the Browserrouter in your index.js page from react router dom and place the app component inside the router tags..check guider app for reference..
 - sometimes modules not found can be resolved by researching and putting a ./ in your import path.
+-some bootstrap feature might not work, you might need to import bootstrap jquery css and other relevant bootsrap cdn links into the index.html page
+-note that some errors might not be what you see in the error message.some might be caused by a wrong syntax or not passing a particular parameter.
 - you can display data from the contect page using the syntax below:
 import React, { Component } from 'react';
 import {InfoConsumer} from '../Context' ;

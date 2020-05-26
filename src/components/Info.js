@@ -22,11 +22,12 @@ import {Link} from 'react-router-dom';
                             <h3 className="card-title text-uppercase">{headerTitle}</h3>
                             <h5 className="card-title">{headerSubTitle}</h5>
                             <p className="card-text">{headerText}</p>
-                            <Link to="/details" className="btn btn-outline-primary text-uppercase">
+                            <Link 
+                            onClick={() => data.handleDetail(id)}
+                            to="/details" 
+                            className="btn btn-outline-primary text-uppercase">
                             More Info
                             </Link>
-
-
                             </div>
                         </div>
                     </div>
